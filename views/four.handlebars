@@ -1,0 +1,82 @@
+{{>header}}
+<div class = "title-container">
+	<img src = "titleimage.png" class = "game-clip">
+	<div class = "game-title">Connect four</div>
+</div>
+
+<div id = "content">
+	<div class = "content-column" id = "left-column">
+		<div class = "player" id = "player-one" data-name="{{player}}" data-room="{{room}}" data-color="black">
+			<div class = "username">Psuedo : {{player}}</div>
+			<div class = "connect-status">Room: {{room}}</div>
+			        <div class="box-content">
+        <p>  Tip: Click on the arrow to drop a piece.When a checker is played, it must be allowed to fall into the bottommost position on the grid. 
+</p>
+     </div>
+
+		</div>
+		<div id = "turn-marker"></div>
+		<button class = "button-option" id = "forfeit-button">Forfeit</button>
+		<button class = "button-option" id = "draw-button">Request a draw</button>
+	</div>
+	<div class = "spacer-div">
+	</div>
+	<div id = "board-container">
+		<div id = "button-array">
+			<button class = "chip-button" id="0"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="1"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="2"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="3"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="4"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="5"><img src = "arrow.png" class = "darrow"></button>
+			<button class = "chip-button" id="6"><img src = "arrow.png" class = "darrow"></button>
+		</div>
+		<div id = "board">
+			{{>col}}
+			{{>col}}
+			{{>col}}
+			{{>col}}
+			{{>col}}
+			{{>col}}
+			{{>col}}
+		</div>
+	</div>
+
+	<div class = "spacer-div">
+	</div>
+	{{#if otherPlayer}}
+		<div class = "content-column" id = "right-column">
+			<div class = "player" id = "player-two"data-name="{{otherPlayer.name}}" data-room="{{room}}" data-color="red">
+				<div class = "username">{{otherPlayer.name}}</div>
+				<div class = "connect-status" style = "color:green;">Connected</div>
+			</div>
+	{{else}}
+		<div class = "content-column" id = "right-column">
+			<div class = "player" id = "player-two">
+				<div class = "username">[...]</div>
+				<div class = "connect-status" style="color:red;">Not connected</div>
+			</div>
+	{{/if}}
+	<div id="wrapper">
+		<div class="box-title" >
+          <h2>Chat Box</h2>
+        </div>
+    			<div id="chatbox"></div>
+        			<input name="usermsg" type="text" id="usermsg" size="63"/>
+        			<input name="submitmsg" type="button"  id="submitmsg" value="Send"/>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- The Modal -->	
+<div id="loading-modal" class="modal">
+	  <!-- Modal content -->
+ 	 <div id="modal-content">
+    		<p>Waiting for another player...</p><img src="./tenor.gif" style="width:100px;height:auto;">
+  	</div>
+</div>
+
+
+<script type="text/javascript" src="./four.js"></script>

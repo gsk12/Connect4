@@ -1,0 +1,119 @@
+
+    {{>header}}
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function random_item(items)
+    { 
+  return items[Math.floor(Math.random()*items.length)];    
+    }
+    items = ['Alice', 'Bob', 'Trudy'];
+    $(document).ready(function() {   
+    var randomNumber = Math.floor(Math.random()*1000);
+    document.getElementById('roomId').value = randomNumber;
+    document.getElementById('playerId').value = random_item(items) + " " +randomNumber.toString();
+
+    });
+
+    function myFunction(e) {
+    document.getElementById("roomId").value = e.target.value;
+}
+
+
+    </script>
+
+    <div id="content">
+      <div id="settings" class="box">
+        <div class="box-title">
+          <h2>Game Settings</h2>
+        </div>
+        <div class="box-content">
+          <form action="./four" method="POST" id="form">
+            <div>
+              <label for="playerId">Pseudo </label>
+              <input type ="text" id="playerId" name="player" readonly/>
+            <div>
+              <label for="roomId">Room </label>
+              <input type ="number" id="roomId" name ="room" readonly/>
+            </div>
+              {{#if otherData}}
+              <div>
+              <label for="roomId">Available Rooms</label>
+
+              <select name="" onchange="myFunction(event)">
+              <option selected="true" disabled="disabled">Select Below</option>    
+              {{#each otherData.data}}
+              <option id="roomId" name ="roomS" value="{{this}}">
+                  {{this}}
+              </option>
+              {{/each}}
+            </select>
+            {{/if}}
+            </div>
+
+                 <button type="button" onClick="checkInput();">Start</button>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+
+      <div id="rules" class="box">
+        <div class="box-title">
+          <h2>Instructions</h2>
+        </div>
+        <div class="box-content">
+        <p >
+        Welcome to Connect 4 game!
+        Connect four of your checkers in a row while preventing your opponent from doing the same. But, look out -- your opponent can sneak up on you and win the game!        </p>
+        <p>
+        Click Start to create a new room or select from the drop down to enter an existing room.
+        Please refer to  <a href="https://en.wikipedia.org/wiki/Connect_Four">Wikipedia article</a> for more information.
+        </p>
+        </div>
+      </div>
+
+      
+      <div id="rules" class="box">
+        <div class="box-title">
+          <h2>Trivia</h2>
+        </div>
+        <div class="box-content">
+        <p>
+        This game is centuries old, Other names for this this game are "Four-in-a-Row" and "Plot Four".
+        The most commonly used Connect Four board size is 7 columns × 6 rows. Size variations include 5×4, 6×5, 8×7, 9×7, 10×7, 8×8.
+        </p>
+        <p>
+        Connect Four is a solved game. Solved first by James D. Allen on October 1, 1988 and independently by Victor Allis on October 16, 1988.The first player can force a win.
+        </p>
+        </div>
+      </div>
+
+      <div class ="box">
+        <div class="box-title" >
+          <h2>Chat Box</h2>
+        </div>
+			<div id="Mainwrapper">
+            <div class="status"></div>
+	    			<div id="Mainchatbox"></div>
+                <input name="namemsg" type="text"  id="Mainnamemsg" placeholder="Enter your Name" />
+	        			<input type="text" id="Mainusermsg" placeholder="Enter Message" size="63"></textarea>
+			          <button type="button">Send</button>
+      </div>
+    </div>
+
+    </div>
+
+    <div id="footer">
+      <p>The Connect 4 game</p>
+    </div>
+    {{#if error}}
+    <script>
+      window.alert("{{text}}");
+    </script>
+    {{/if}}
+    <script type="text/javascript" src="./index.js"></script>
+  </body> 
+</html>

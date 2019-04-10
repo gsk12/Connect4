@@ -1,0 +1,240 @@
+html{
+	margin: 0;
+}
+
+body{
+	margin: 0;
+	font-family: georgia;
+}
+
+
+#header h1 {
+	margin: 0;
+	width: 95%;
+	background-color: #7acfd6;
+	color: white;
+	height: 50px;
+	font-family: "verdana";
+	padding-left: 5%;
+}
+
+.title-container {
+	width: 100%;
+	height: 10vh;
+	background-color: orange;
+	margin: 0;
+	padding: 0;
+}
+
+.game-title {
+	margin: 0;
+	color: black;
+	font-family: "verdana";
+	display: inline;
+	font-size: 8vh;
+	font-weight: bold;
+	position: absolute;
+	top: 50px;
+	margin-left: 25px;
+}
+
+.game-clip {
+	display: inline;
+	height: 90%;
+	margin: 0;
+}
+
+
+#wrapper {
+	clear:both;
+	float: left;
+	display: block;
+	background-color: lightgrey;
+	border-width: .2vw;
+	border-style: solid;
+	border-color: black;
+	width: 92%;
+	padding: 3%;
+	margin: 3%;
+	margin-top: 20vh;
+}
+
+#chatbox {
+	width: 95%;
+	margin: auto;
+	background-color: white;
+	border-width: .1vw;
+	border-style: solid;
+	border-color: lightblue;
+	height: 30vh;
+	overflow: auto;
+}
+
+#usermsg{
+	width: 75%;
+	margin: 2%;
+}
+
+#submitmsg{
+	width: 15%;
+	font-size: .6vw;
+	padding: .5%;
+}
+
+
+.button-option{
+	width: 40%;
+	margin: 5%;
+	float: left;
+	font-size: .9vw;
+}
+
+#turn-marker {
+	float: left;
+	display: inline;
+	border-radius: 25px;
+	width: 90%;
+	margin: 5%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	text-align: center;
+	font-size: 3vw;
+}
+
+#board-container {
+	display: inline;
+	width: 80vmin;
+	max-width: 55%;
+	float: left;
+	padding: .5%;
+}
+
+#board {
+	clear: both;
+	border-radius: 15px;
+	padding-bottom: 74%;
+	background-color: lightgrey;
+}
+
+.spacer-div {
+	display: inline;
+	float: left;
+	padding-bottom: 50vh;
+	padding-right: calc(27vw - 40vh);
+}
+
+.darrow{
+	float: left;
+	width: 100%;
+}
+
+.chip-one{
+	background-color: red;
+}
+
+.chip-button {
+	display: inline;
+	float: left;
+	width: 8%;
+	margin-right: 3.14%;
+	margin-left: 3.14%;
+	margin-bottom: 1%;
+	border-style: none;
+	border-radius: 50%;
+	padding-top: 1.5%;
+	padding-bottom: 2%;
+	background-color: "grey";
+}
+
+.chip-button:hover {
+	background-color: green;
+	font-weight: bold;
+}
+
+.red-display{
+	background-color: red;
+}
+
+.green-display{
+	background-color: green;
+}
+
+.chip-button:focus {
+	outline: 0;
+}
+
+.chip-slot {
+	display: block;
+	border-radius: 50%;
+	border-style: none;
+	padding-bottom: 80%;
+	margin: 10%;
+	background-color: lightblue;
+}
+
+.board-column {
+	border-radius: 10px;
+	display: inline;
+	float: left;
+	width: 13.25%;
+	margin: .5%;
+	background-color: lightyellow;
+	padding-bottom: 0;
+}
+
+.player {
+	display: block;
+	margin: 1%;
+	border-radius: 10px;
+	border-width: .25vw;
+	border-style: solid;
+	border-color: black;
+	padding: .4vw;
+	width: 20vw;
+	float: left;
+}
+
+.content-column {
+	float: left;
+	display: inline;
+	width: 21vw;
+}
+
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+#modal-content {
+	text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

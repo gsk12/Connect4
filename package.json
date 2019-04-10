@@ -1,0 +1,20 @@
+{
+  "name": "connect-4",
+  "version": "1.0.0",
+  "description": "A Connect four game demonstration",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Sampath Grandhi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.1.0",
+    "mongodb": "^3.1.13",
+    "socket.io": "^2.2.0"
+  }
+}
