@@ -110,4 +110,3 @@ References
 - [Title Image credit](https://itunes.apple.com/us/app/connect-fun-four-in-a-row/id703429662?mt=8)
 - [Animated modal header](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2)
 -  [GameHub](https://github.com/benas/gamehub.io)
-- Core Game Logic adapted from several interet resources.
